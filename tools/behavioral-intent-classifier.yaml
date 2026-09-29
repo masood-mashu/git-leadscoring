@@ -1,14 +1,18 @@
-name: "behavioral-intent-classifier"
+name: behavioral-intent-classifier
+version: 1.0.0
 description: "Calculates composite buyer intent score from multi-touch website interactions"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "behavioral_intent_classifier.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     interactions_json:
-      type: "string"
+      type: string
       description: "JSON with pricing_page_views, whitepaper_downloads, webinar_attended"
   required:
-    - "interactions_json"
+    - interactions_json
+implementation:
+  type: script
+  path: behavioral_intent_classifier.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

@@ -1,14 +1,18 @@
-name: "sdr-routing-engine"
+name: sdr-routing-engine
+version: 1.0.0
 description: "Assigns lead to specialized enterprise account executive or inbound SDR queue"
-version: "0.1.0"
-runtime:
-  language: "python"
-  entrypoint: "sdr_routing_engine.py"
-parameters:
-  type: "object"
+input_schema:
+  type: object
   properties:
     qualification_json:
-      type: "string"
+      type: string
       description: "JSON with icp_tier and intent_status"
   required:
-    - "qualification_json"
+    - qualification_json
+implementation:
+  type: script
+  path: sdr_routing_engine.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true
