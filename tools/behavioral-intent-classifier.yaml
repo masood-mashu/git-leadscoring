@@ -1,0 +1,14 @@
+name: "behavioral-intent-classifier"
+description: "Calculates composite buyer intent score from multi-touch website interactions"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "behavioral_intent_classifier.py"
+parameters:
+  type: "object"
+  properties:
+    interactions_json:
+      type: "string"
+      description: "JSON with pricing_page_views, whitepaper_downloads, webinar_attended"
+  required:
+    - "interactions_json"

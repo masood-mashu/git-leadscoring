@@ -1,0 +1,25 @@
+spec_version: "0.1.0"
+name: "git-leadscoring"
+version: "0.1.0"
+description: "Autonomous B2B ICP Qualification, Multi-Touch Intent Scoring & SDR Routing Agent"
+framework: "opengap"
+authors:
+  - name: "masood-mashu"
+    email: "masoodmashu03@gmail.com"
+license: "Apache-2.0"
+
+runtime:
+  language: "python"
+  version: ">=3.10"
+  timeout: 120
+
+tags:
+  - marketing-sales
+  - lead-scoring
+  - icp-qualification
+  - intent-data
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-leadscoring-01"
+  passport_category: "Marketing & sales"

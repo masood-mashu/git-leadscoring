@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "score_icp_fit",
+  "description": "Evaluates enterprise company size and revenue against Ideal Customer Profile tiers",
+  "type": "object",
+  "properties": {
+    "firmographics_json": {
+      "type": "string",
+      "description": "JSON with employee_count and annual_revenue_usd"
+    }
+  },
+  "required": [
+    "firmographics_json"
+  ]
+}

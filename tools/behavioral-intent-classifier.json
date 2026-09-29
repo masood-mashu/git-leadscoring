@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "classify_behavioral_intent",
+  "description": "Calculates composite buyer intent score from multi-touch website interactions",
+  "type": "object",
+  "properties": {
+    "interactions_json": {
+      "type": "string",
+      "description": "JSON with pricing_page_views, whitepaper_downloads, webinar_attended"
+    }
+  },
+  "required": [
+    "interactions_json"
+  ]
+}

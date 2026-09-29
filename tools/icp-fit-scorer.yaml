@@ -1,0 +1,14 @@
+name: "icp-fit-scorer"
+description: "Evaluates enterprise company size and revenue against Ideal Customer Profile tiers"
+version: "0.1.0"
+runtime:
+  language: "python"
+  entrypoint: "icp_fit_scorer.py"
+parameters:
+  type: "object"
+  properties:
+    firmographics_json:
+      type: "string"
+      description: "JSON with employee_count and annual_revenue_usd"
+  required:
+    - "firmographics_json"
